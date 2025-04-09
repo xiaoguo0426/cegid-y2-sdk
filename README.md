@@ -10,7 +10,7 @@ Consume CEGID/Y2's SOAP API.
 ## Installation
 
 ```
-composer require pgrimaud/cegid-y2-sdk
+composer require onetech/cegid-y2-sdk
 ```
 ## Basic usage
 
@@ -24,7 +24,7 @@ use Y2\ItemInventory\ItemInventoryWcfService;
 use Y2\ItemInventory\RetailContext;
 
 $wsdl     = ''; // WSDL interface
-$login    = ''; // credentials for basic auth
+$login    = ''; // credentials for basic auth. format: DOMAIN\\USERNAME
 $password = ''; // credentials for basic auth
 $dbId     = ''; // Y2 database ID
 
