@@ -1,0 +1,22 @@
+{
+  "name": "pgrimaud/cegid-y2-sdk",
+  "type": "library",
+  "description": "CEGID / Y2 - SDK",
+  "homepage": "https://github.com/pgrimaud/cegid-y2-sdk",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Pierre Grimaud",
+      "email": "pierre@bigyouth.fr"
+    }
+  ],
+  "require": {
+    "php": ">=5.6",
+    "ext-soap": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Y2\\": "src/"
+    }
+  }
+}
