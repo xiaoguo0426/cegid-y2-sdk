@@ -1,13 +1,13 @@
 {
-  "name": "pgrimaud/cegid-y2-sdk",
+  "name": "onetech/cegid-y2-sdk",
   "type": "library",
   "description": "CEGID / Y2 - SDK",
-  "homepage": "https://github.com/pgrimaud/cegid-y2-sdk",
+  "homepage": "https://github.com/onetech/cegid-y2-sdk",
   "license": "MIT",
   "authors": [
     {
-      "name": "Pierre Grimaud",
-      "email": "pierre@bigyouth.fr"
+      "name": "Peter Guo",
+      "email": "740644717@qq.com"
     }
   ],
   "require": {
