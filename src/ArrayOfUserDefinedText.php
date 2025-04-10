@@ -1,14 +1,13 @@
 <?php
 
-namespace Y2\Customer;
+namespace Y2;
 
-class ArrayOfUserDefinedBoolean implements \ArrayAccess, \Iterator, \Countable
+class ArrayOfUserDefinedText implements \ArrayAccess, \Iterator, \Countable
 {
-
     /**
-     * @var UserDefinedBoolean[] $UserDefinedBoolean
+     * @var UserDefinedText[] $UserDefinedText
      */
-    protected $UserDefinedBoolean = null;
+    protected $UserDefinedText = null;
 
     public function __construct()
     {
@@ -16,21 +15,21 @@ class ArrayOfUserDefinedBoolean implements \ArrayAccess, \Iterator, \Countable
     }
 
     /**
-     * @return UserDefinedBoolean[]
+     * @return UserDefinedText[]
      */
-    public function getUserDefinedBoolean()
+    public function getUserDefinedText()
     {
-        return $this->UserDefinedBoolean;
+        return $this->UserDefinedText;
     }
 
     /**
-     * @param UserDefinedBoolean[] $UserDefinedBoolean
+     * @param UserDefinedText[] $UserDefinedText
      *
-     * @return ArrayOfUserDefinedBoolean
+     * @return ArrayOfUserDefinedText
      */
-    public function setUserDefinedBoolean(array $UserDefinedBoolean = null)
+    public function setUserDefinedText(array $UserDefinedText = null)
     {
-        $this->UserDefinedBoolean = $UserDefinedBoolean;
+        $this->UserDefinedText = $UserDefinedText;
         return $this;
     }
 
@@ -43,7 +42,7 @@ class ArrayOfUserDefinedBoolean implements \ArrayAccess, \Iterator, \Countable
      */
     public function offsetExists($offset)
     {
-        return isset($this->UserDefinedBoolean[$offset]);
+        return isset($this->UserDefinedText[$offset]);
     }
 
     /**
@@ -51,27 +50,27 @@ class ArrayOfUserDefinedBoolean implements \ArrayAccess, \Iterator, \Countable
      *
      * @param mixed $offset The offset to retrieve
      *
-     * @return UserDefinedBoolean
+     * @return UserDefinedText
      */
     public function offsetGet($offset)
     {
-        return $this->UserDefinedBoolean[$offset];
+        return $this->UserDefinedText[$offset];
     }
 
     /**
      * ArrayAccess implementation
      *
-     * @param mixed              $offset The offset to assign the value to
-     * @param UserDefinedBoolean $value The value to set
+     * @param mixed           $offset The offset to assign the value to
+     * @param UserDefinedText $value The value to set
      *
      * @return void
      */
     public function offsetSet($offset, $value)
     {
         if (!isset($offset)) {
-            $this->UserDefinedBoolean[] = $value;
+            $this->UserDefinedText[] = $value;
         } else {
-            $this->UserDefinedBoolean[$offset] = $value;
+            $this->UserDefinedText[$offset] = $value;
         }
     }
 
@@ -84,17 +83,17 @@ class ArrayOfUserDefinedBoolean implements \ArrayAccess, \Iterator, \Countable
      */
     public function offsetUnset($offset)
     {
-        unset($this->UserDefinedBoolean[$offset]);
+        unset($this->UserDefinedText[$offset]);
     }
 
     /**
      * Iterator implementation
      *
-     * @return UserDefinedBoolean Return the current element
+     * @return UserDefinedText Return the current element
      */
     public function current()
     {
-        return current($this->UserDefinedBoolean);
+        return current($this->UserDefinedText);
     }
 
     /**
@@ -105,7 +104,7 @@ class ArrayOfUserDefinedBoolean implements \ArrayAccess, \Iterator, \Countable
      */
     public function next()
     {
-        next($this->UserDefinedBoolean);
+        next($this->UserDefinedText);
     }
 
     /**
@@ -115,7 +114,7 @@ class ArrayOfUserDefinedBoolean implements \ArrayAccess, \Iterator, \Countable
      */
     public function key()
     {
-        return key($this->UserDefinedBoolean);
+        return key($this->UserDefinedText);
     }
 
     /**
@@ -136,7 +135,7 @@ class ArrayOfUserDefinedBoolean implements \ArrayAccess, \Iterator, \Countable
      */
     public function rewind()
     {
-        reset($this->UserDefinedBoolean);
+        reset($this->UserDefinedText);
     }
 
     /**
@@ -146,7 +145,7 @@ class ArrayOfUserDefinedBoolean implements \ArrayAccess, \Iterator, \Countable
      */
     public function count()
     {
-        return count($this->UserDefinedBoolean);
+        return count($this->UserDefinedText);
     }
 
 }

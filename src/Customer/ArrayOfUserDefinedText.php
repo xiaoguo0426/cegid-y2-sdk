@@ -141,7 +141,7 @@ class ArrayOfUserDefinedText implements \ArrayAccess, \Iterator, \Countable
     /**
      * Countable implementation
      *
-     * @return UserDefinedText Return count of elements
+     * @return int Return count of elements
      */
     public function count()
     {

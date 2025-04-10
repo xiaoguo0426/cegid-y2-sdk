@@ -1,14 +1,13 @@
 <?php
 
-namespace Y2\Customer;
+namespace Y2;
 
-class ArrayOfUserDefinedBoolean implements \ArrayAccess, \Iterator, \Countable
+class ArrayOfUserField implements \ArrayAccess, \Iterator, \Countable
 {
-
     /**
-     * @var UserDefinedBoolean[] $UserDefinedBoolean
+     * @var UserField[] $UserField
      */
-    protected $UserDefinedBoolean = null;
+    protected $UserField = null;
 
     public function __construct()
     {
@@ -16,21 +15,21 @@ class ArrayOfUserDefinedBoolean implements \ArrayAccess, \Iterator, \Countable
     }
 
     /**
-     * @return UserDefinedBoolean[]
+     * @return UserField[]
      */
-    public function getUserDefinedBoolean()
+    public function getUserField()
     {
-        return $this->UserDefinedBoolean;
+        return $this->UserField;
     }
 
     /**
-     * @param UserDefinedBoolean[] $UserDefinedBoolean
+     * @param UserField[] $UserField
      *
-     * @return ArrayOfUserDefinedBoolean
+     * @return ArrayOfUserField
      */
-    public function setUserDefinedBoolean(array $UserDefinedBoolean = null)
+    public function setUserField(array $UserField = null)
     {
-        $this->UserDefinedBoolean = $UserDefinedBoolean;
+        $this->UserField = $UserField;
         return $this;
     }
 
@@ -43,7 +42,7 @@ class ArrayOfUserDefinedBoolean implements \ArrayAccess, \Iterator, \Countable
      */
     public function offsetExists($offset)
     {
-        return isset($this->UserDefinedBoolean[$offset]);
+        return isset($this->UserField[$offset]);
     }
 
     /**
@@ -51,27 +50,27 @@ class ArrayOfUserDefinedBoolean implements \ArrayAccess, \Iterator, \Countable
      *
      * @param mixed $offset The offset to retrieve
      *
-     * @return UserDefinedBoolean
+     * @return UserField
      */
     public function offsetGet($offset)
     {
-        return $this->UserDefinedBoolean[$offset];
+        return $this->UserField[$offset];
     }
 
     /**
      * ArrayAccess implementation
      *
-     * @param mixed              $offset The offset to assign the value to
-     * @param UserDefinedBoolean $value The value to set
+     * @param mixed     $offset The offset to assign the value to
+     * @param UserField $value The value to set
      *
      * @return void
      */
     public function offsetSet($offset, $value)
     {
         if (!isset($offset)) {
-            $this->UserDefinedBoolean[] = $value;
+            $this->UserField[] = $value;
         } else {
-            $this->UserDefinedBoolean[$offset] = $value;
+            $this->UserField[$offset] = $value;
         }
     }
 
@@ -84,17 +83,17 @@ class ArrayOfUserDefinedBoolean implements \ArrayAccess, \Iterator, \Countable
      */
     public function offsetUnset($offset)
     {
-        unset($this->UserDefinedBoolean[$offset]);
+        unset($this->UserField[$offset]);
     }
 
     /**
      * Iterator implementation
      *
-     * @return UserDefinedBoolean Return the current element
+     * @return UserField Return the current element
      */
     public function current()
     {
-        return current($this->UserDefinedBoolean);
+        return current($this->UserField);
     }
 
     /**
@@ -105,7 +104,7 @@ class ArrayOfUserDefinedBoolean implements \ArrayAccess, \Iterator, \Countable
      */
     public function next()
     {
-        next($this->UserDefinedBoolean);
+        next($this->UserField);
     }
 
     /**
@@ -115,7 +114,7 @@ class ArrayOfUserDefinedBoolean implements \ArrayAccess, \Iterator, \Countable
      */
     public function key()
     {
-        return key($this->UserDefinedBoolean);
+        return key($this->UserField);
     }
 
     /**
@@ -136,17 +135,17 @@ class ArrayOfUserDefinedBoolean implements \ArrayAccess, \Iterator, \Countable
      */
     public function rewind()
     {
-        reset($this->UserDefinedBoolean);
+        reset($this->UserField);
     }
 
     /**
      * Countable implementation
      *
-     * @return int Return count of elements
+     * @return UserField Return count of elements
      */
     public function count()
     {
-        return count($this->UserDefinedBoolean);
+        return count($this->UserField);
     }
 
 }

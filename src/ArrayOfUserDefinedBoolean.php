@@ -1,6 +1,6 @@
 <?php
 
-namespace Y2\Customer;
+namespace Y2;
 
 class ArrayOfUserDefinedBoolean implements \ArrayAccess, \Iterator, \Countable
 {

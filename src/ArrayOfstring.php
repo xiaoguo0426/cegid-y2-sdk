@@ -1,14 +1,13 @@
 <?php
 
-namespace Y2\Customer;
+namespace Y2;
 
-class ArrayOfUserDefinedBoolean implements \ArrayAccess, \Iterator, \Countable
+class ArrayOfstring implements \ArrayAccess, \Iterator, \Countable
 {
-
     /**
-     * @var UserDefinedBoolean[] $UserDefinedBoolean
+     * @var string[] $string
      */
-    protected $UserDefinedBoolean = null;
+    protected $string = null;
 
     public function __construct()
     {
@@ -16,21 +15,21 @@ class ArrayOfUserDefinedBoolean implements \ArrayAccess, \Iterator, \Countable
     }
 
     /**
-     * @return UserDefinedBoolean[]
+     * @return string[]
      */
-    public function getUserDefinedBoolean()
+    public function getString()
     {
-        return $this->UserDefinedBoolean;
+        return $this->string;
     }
 
     /**
-     * @param UserDefinedBoolean[] $UserDefinedBoolean
+     * @param string[] $string
      *
-     * @return ArrayOfUserDefinedBoolean
+     * @return ArrayOfstring
      */
-    public function setUserDefinedBoolean(array $UserDefinedBoolean = null)
+    public function setString(array $string = null)
     {
-        $this->UserDefinedBoolean = $UserDefinedBoolean;
+        $this->string = $string;
         return $this;
     }
 
@@ -43,7 +42,7 @@ class ArrayOfUserDefinedBoolean implements \ArrayAccess, \Iterator, \Countable
      */
     public function offsetExists($offset)
     {
-        return isset($this->UserDefinedBoolean[$offset]);
+        return isset($this->string[$offset]);
     }
 
     /**
@@ -51,27 +50,27 @@ class ArrayOfUserDefinedBoolean implements \ArrayAccess, \Iterator, \Countable
      *
      * @param mixed $offset The offset to retrieve
      *
-     * @return UserDefinedBoolean
+     * @return string
      */
     public function offsetGet($offset)
     {
-        return $this->UserDefinedBoolean[$offset];
+        return $this->string[$offset];
     }
 
     /**
      * ArrayAccess implementation
      *
-     * @param mixed              $offset The offset to assign the value to
-     * @param UserDefinedBoolean $value The value to set
+     * @param mixed  $offset The offset to assign the value to
+     * @param string $value The value to set
      *
      * @return void
      */
     public function offsetSet($offset, $value)
     {
         if (!isset($offset)) {
-            $this->UserDefinedBoolean[] = $value;
+            $this->string[] = $value;
         } else {
-            $this->UserDefinedBoolean[$offset] = $value;
+            $this->string[$offset] = $value;
         }
     }
 
@@ -84,17 +83,17 @@ class ArrayOfUserDefinedBoolean implements \ArrayAccess, \Iterator, \Countable
      */
     public function offsetUnset($offset)
     {
-        unset($this->UserDefinedBoolean[$offset]);
+        unset($this->string[$offset]);
     }
 
     /**
      * Iterator implementation
      *
-     * @return UserDefinedBoolean Return the current element
+     * @return string Return the current element
      */
     public function current()
     {
-        return current($this->UserDefinedBoolean);
+        return current($this->string);
     }
 
     /**
@@ -105,7 +104,7 @@ class ArrayOfUserDefinedBoolean implements \ArrayAccess, \Iterator, \Countable
      */
     public function next()
     {
-        next($this->UserDefinedBoolean);
+        next($this->string);
     }
 
     /**
@@ -115,7 +114,7 @@ class ArrayOfUserDefinedBoolean implements \ArrayAccess, \Iterator, \Countable
      */
     public function key()
     {
-        return key($this->UserDefinedBoolean);
+        return key($this->string);
     }
 
     /**
@@ -136,17 +135,17 @@ class ArrayOfUserDefinedBoolean implements \ArrayAccess, \Iterator, \Countable
      */
     public function rewind()
     {
-        reset($this->UserDefinedBoolean);
+        reset($this->string);
     }
 
     /**
      * Countable implementation
      *
-     * @return int Return count of elements
+     * @return string Return count of elements
      */
     public function count()
     {
-        return count($this->UserDefinedBoolean);
+        return count($this->string);
     }
 
 }

@@ -1,36 +1,35 @@
 <?php
 
-namespace Y2\Customer;
+namespace Y2;
 
-class ArrayOfUserDefinedBoolean implements \ArrayAccess, \Iterator, \Countable
+class ArrayOfUserDefinedDate implements \ArrayAccess, \Iterator, \Countable
 {
-
     /**
-     * @var UserDefinedBoolean[] $UserDefinedBoolean
+     * @var UserDefinedDate[] $UserDefinedDate
      */
-    protected $UserDefinedBoolean = null;
-
+    protected $UserDefinedDate = null;
+    
     public function __construct()
     {
 
     }
 
     /**
-     * @return UserDefinedBoolean[]
+     * @return UserDefinedDate[]
      */
-    public function getUserDefinedBoolean()
+    public function getUserDefinedDate()
     {
-        return $this->UserDefinedBoolean;
+        return $this->UserDefinedDate;
     }
 
     /**
-     * @param UserDefinedBoolean[] $UserDefinedBoolean
+     * @param UserDefinedDate[] $UserDefinedDate
      *
-     * @return ArrayOfUserDefinedBoolean
+     * @return ArrayOfUserDefinedDate
      */
-    public function setUserDefinedBoolean(array $UserDefinedBoolean = null)
+    public function setUserDefinedDate(array $UserDefinedDate = null)
     {
-        $this->UserDefinedBoolean = $UserDefinedBoolean;
+        $this->UserDefinedDate = $UserDefinedDate;
         return $this;
     }
 
@@ -43,7 +42,7 @@ class ArrayOfUserDefinedBoolean implements \ArrayAccess, \Iterator, \Countable
      */
     public function offsetExists($offset)
     {
-        return isset($this->UserDefinedBoolean[$offset]);
+        return isset($this->UserDefinedDate[$offset]);
     }
 
     /**
@@ -51,27 +50,27 @@ class ArrayOfUserDefinedBoolean implements \ArrayAccess, \Iterator, \Countable
      *
      * @param mixed $offset The offset to retrieve
      *
-     * @return UserDefinedBoolean
+     * @return UserDefinedDate
      */
     public function offsetGet($offset)
     {
-        return $this->UserDefinedBoolean[$offset];
+        return $this->UserDefinedDate[$offset];
     }
 
     /**
      * ArrayAccess implementation
      *
-     * @param mixed              $offset The offset to assign the value to
-     * @param UserDefinedBoolean $value The value to set
+     * @param mixed           $offset The offset to assign the value to
+     * @param UserDefinedDate $value The value to set
      *
      * @return void
      */
     public function offsetSet($offset, $value)
     {
         if (!isset($offset)) {
-            $this->UserDefinedBoolean[] = $value;
+            $this->UserDefinedDate[] = $value;
         } else {
-            $this->UserDefinedBoolean[$offset] = $value;
+            $this->UserDefinedDate[$offset] = $value;
         }
     }
 
@@ -84,17 +83,17 @@ class ArrayOfUserDefinedBoolean implements \ArrayAccess, \Iterator, \Countable
      */
     public function offsetUnset($offset)
     {
-        unset($this->UserDefinedBoolean[$offset]);
+        unset($this->UserDefinedDate[$offset]);
     }
 
     /**
      * Iterator implementation
      *
-     * @return UserDefinedBoolean Return the current element
+     * @return UserDefinedDate Return the current element
      */
     public function current()
     {
-        return current($this->UserDefinedBoolean);
+        return current($this->UserDefinedDate);
     }
 
     /**
@@ -105,7 +104,7 @@ class ArrayOfUserDefinedBoolean implements \ArrayAccess, \Iterator, \Countable
      */
     public function next()
     {
-        next($this->UserDefinedBoolean);
+        next($this->UserDefinedDate);
     }
 
     /**
@@ -115,7 +114,7 @@ class ArrayOfUserDefinedBoolean implements \ArrayAccess, \Iterator, \Countable
      */
     public function key()
     {
-        return key($this->UserDefinedBoolean);
+        return key($this->UserDefinedDate);
     }
 
     /**
@@ -136,17 +135,17 @@ class ArrayOfUserDefinedBoolean implements \ArrayAccess, \Iterator, \Countable
      */
     public function rewind()
     {
-        reset($this->UserDefinedBoolean);
+        reset($this->UserDefinedDate);
     }
 
     /**
      * Countable implementation
      *
-     * @return int Return count of elements
+     * @return UserDefinedDate Return count of elements
      */
     public function count()
     {
-        return count($this->UserDefinedBoolean);
+        return count($this->UserDefinedDate);
     }
 
 }

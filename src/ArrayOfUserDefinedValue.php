@@ -1,14 +1,13 @@
 <?php
 
-namespace Y2\Customer;
+namespace Y2;
 
-class ArrayOfUserDefinedBoolean implements \ArrayAccess, \Iterator, \Countable
+class ArrayOfUserDefinedValue implements \ArrayAccess, \Iterator, \Countable
 {
-
     /**
-     * @var UserDefinedBoolean[] $UserDefinedBoolean
+     * @var UserDefinedValue[] $UserDefinedValue
      */
-    protected $UserDefinedBoolean = null;
+    protected $UserDefinedValue = null;
 
     public function __construct()
     {
@@ -16,21 +15,21 @@ class ArrayOfUserDefinedBoolean implements \ArrayAccess, \Iterator, \Countable
     }
 
     /**
-     * @return UserDefinedBoolean[]
+     * @return UserDefinedValue[]
      */
-    public function getUserDefinedBoolean()
+    public function getUserDefinedValue()
     {
-        return $this->UserDefinedBoolean;
+        return $this->UserDefinedValue;
     }
 
     /**
-     * @param UserDefinedBoolean[] $UserDefinedBoolean
+     * @param UserDefinedValue[] $UserDefinedValue
      *
-     * @return ArrayOfUserDefinedBoolean
+     * @return ArrayOfUserDefinedValue
      */
-    public function setUserDefinedBoolean(array $UserDefinedBoolean = null)
+    public function setUserDefinedValue(array $UserDefinedValue = null)
     {
-        $this->UserDefinedBoolean = $UserDefinedBoolean;
+        $this->UserDefinedValue = $UserDefinedValue;
         return $this;
     }
 
@@ -43,7 +42,7 @@ class ArrayOfUserDefinedBoolean implements \ArrayAccess, \Iterator, \Countable
      */
     public function offsetExists($offset)
     {
-        return isset($this->UserDefinedBoolean[$offset]);
+        return isset($this->UserDefinedValue[$offset]);
     }
 
     /**
@@ -51,27 +50,27 @@ class ArrayOfUserDefinedBoolean implements \ArrayAccess, \Iterator, \Countable
      *
      * @param mixed $offset The offset to retrieve
      *
-     * @return UserDefinedBoolean
+     * @return UserDefinedValue
      */
     public function offsetGet($offset)
     {
-        return $this->UserDefinedBoolean[$offset];
+        return $this->UserDefinedValue[$offset];
     }
 
     /**
      * ArrayAccess implementation
      *
-     * @param mixed              $offset The offset to assign the value to
-     * @param UserDefinedBoolean $value The value to set
+     * @param mixed            $offset The offset to assign the value to
+     * @param UserDefinedValue $value The value to set
      *
      * @return void
      */
     public function offsetSet($offset, $value)
     {
         if (!isset($offset)) {
-            $this->UserDefinedBoolean[] = $value;
+            $this->UserDefinedValue[] = $value;
         } else {
-            $this->UserDefinedBoolean[$offset] = $value;
+            $this->UserDefinedValue[$offset] = $value;
         }
     }
 
@@ -84,17 +83,17 @@ class ArrayOfUserDefinedBoolean implements \ArrayAccess, \Iterator, \Countable
      */
     public function offsetUnset($offset)
     {
-        unset($this->UserDefinedBoolean[$offset]);
+        unset($this->UserDefinedValue[$offset]);
     }
 
     /**
      * Iterator implementation
      *
-     * @return UserDefinedBoolean Return the current element
+     * @return UserDefinedValue Return the current element
      */
     public function current()
     {
-        return current($this->UserDefinedBoolean);
+        return current($this->UserDefinedValue);
     }
 
     /**
@@ -105,7 +104,7 @@ class ArrayOfUserDefinedBoolean implements \ArrayAccess, \Iterator, \Countable
      */
     public function next()
     {
-        next($this->UserDefinedBoolean);
+        next($this->UserDefinedValue);
     }
 
     /**
@@ -115,7 +114,7 @@ class ArrayOfUserDefinedBoolean implements \ArrayAccess, \Iterator, \Countable
      */
     public function key()
     {
-        return key($this->UserDefinedBoolean);
+        return key($this->UserDefinedValue);
     }
 
     /**
@@ -136,17 +135,17 @@ class ArrayOfUserDefinedBoolean implements \ArrayAccess, \Iterator, \Countable
      */
     public function rewind()
     {
-        reset($this->UserDefinedBoolean);
+        reset($this->UserDefinedValue);
     }
 
     /**
      * Countable implementation
      *
-     * @return int Return count of elements
+     * @return UserDefinedValue Return count of elements
      */
     public function count()
     {
-        return count($this->UserDefinedBoolean);
+        return count($this->UserDefinedValue);
     }
 
 }

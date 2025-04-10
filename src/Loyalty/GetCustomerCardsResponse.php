@@ -17,7 +17,7 @@ class GetCustomerCardsResponse
     /**
      * @return ArrayOfCardHeaderGet
      */
-    public function getCustomerCardsResult()
+    public function getGetCustomerCardsResult()
     {
         return $this->GetCustomerCardsResult;
     }
@@ -26,7 +26,7 @@ class GetCustomerCardsResponse
      * @param ArrayOfCardHeaderGet $GetCustomerCardsResult
      * @return $this
      */
-    public function setCustomerCardsResult($GetCustomerCardsResult)
+    public function setGetCustomerCardsResult($GetCustomerCardsResult)
     {
         $this->GetCustomerCardsResult = $GetCustomerCardsResult;
         return $this;
