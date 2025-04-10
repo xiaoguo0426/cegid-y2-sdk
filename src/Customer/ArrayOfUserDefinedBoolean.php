@@ -142,7 +142,7 @@ class ArrayOfUserDefinedBoolean implements \ArrayAccess, \Iterator, \Countable
     /**
      * Countable implementation
      *
-     * @return UserDefinedBoolean Return count of elements
+     * @return int Return count of elements
      */
     public function count()
     {
