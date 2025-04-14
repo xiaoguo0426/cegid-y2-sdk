@@ -40,10 +40,10 @@ class GetHeaderList_Request
      */
     protected $StoreIds = null;
 
-    
+
     public function __construct()
     {
-    
+
     }
 
     /**
@@ -51,7 +51,7 @@ class GetHeaderList_Request
      */
     public function getActive()
     {
-      return $this->Active;
+        return $this->Active;
     }
 
     /**
@@ -60,8 +60,8 @@ class GetHeaderList_Request
      */
     public function setActive($Active)
     {
-      $this->Active = $Active;
-      return $this;
+        $this->Active = $Active;
+        return $this;
     }
 
     /**
@@ -69,15 +69,15 @@ class GetHeaderList_Request
      */
     public function getBeginDate()
     {
-      if ($this->BeginDate == null) {
-        return null;
-      } else {
-        try {
-          return new \DateTime($this->BeginDate);
-        } catch (\Exception $e) {
-          return false;
+        if ($this->BeginDate == null) {
+            return null;
+        } else {
+            try {
+                return new \DateTime($this->BeginDate);
+            } catch (\Exception $e) {
+                return false;
+            }
         }
-      }
     }
 
     /**
@@ -86,12 +86,12 @@ class GetHeaderList_Request
      */
     public function setBeginDate(\DateTime $BeginDate = null)
     {
-      if ($BeginDate == null) {
-       $this->BeginDate = null;
-      } else {
-        $this->BeginDate = $BeginDate->format(\DateTime::ATOM);
-      }
-      return $this;
+        if ($BeginDate == null) {
+            $this->BeginDate = null;
+        } else {
+            $this->BeginDate = $BeginDate->format('Y-m-d H:i:s');
+        }
+        return $this;
     }
 
     /**
@@ -99,7 +99,7 @@ class GetHeaderList_Request
      */
     public function getCustomerId()
     {
-      return $this->CustomerId;
+        return $this->CustomerId;
     }
 
     /**
@@ -108,8 +108,8 @@ class GetHeaderList_Request
      */
     public function setCustomerId($CustomerId)
     {
-      $this->CustomerId = $CustomerId;
-      return $this;
+        $this->CustomerId = $CustomerId;
+        return $this;
     }
 
     /**
@@ -117,7 +117,7 @@ class GetHeaderList_Request
      */
     public function getDocumentTypes()
     {
-      return $this->DocumentTypes;
+        return $this->DocumentTypes;
     }
 
     /**
@@ -126,8 +126,8 @@ class GetHeaderList_Request
      */
     public function setDocumentTypes($DocumentTypes)
     {
-      $this->DocumentTypes = $DocumentTypes;
-      return $this;
+        $this->DocumentTypes = $DocumentTypes;
+        return $this;
     }
 
     /**
@@ -135,15 +135,15 @@ class GetHeaderList_Request
      */
     public function getEndDate()
     {
-      if ($this->EndDate == null) {
-        return null;
-      } else {
-        try {
-          return new \DateTime($this->EndDate);
-        } catch (\Exception $e) {
-          return false;
+        if ($this->EndDate == null) {
+            return null;
+        } else {
+            try {
+                return new \DateTime($this->EndDate);
+            } catch (\Exception $e) {
+                return false;
+            }
         }
-      }
     }
 
     /**
@@ -152,12 +152,12 @@ class GetHeaderList_Request
      */
     public function setEndDate(\DateTime $EndDate = null)
     {
-      if ($EndDate == null) {
-       $this->EndDate = null;
-      } else {
-        $this->EndDate = $EndDate->format(\DateTime::ATOM);
-      }
-      return $this;
+        if ($EndDate == null) {
+            $this->EndDate = null;
+        } else {
+            $this->EndDate = $EndDate->format('Y-m-d H:i:s');
+        }
+        return $this;
     }
 
     /**
@@ -165,7 +165,7 @@ class GetHeaderList_Request
      */
     public function getPager()
     {
-      return $this->Pager;
+        return $this->Pager;
     }
 
     /**
@@ -174,8 +174,8 @@ class GetHeaderList_Request
      */
     public function setPager($Pager)
     {
-      $this->Pager = $Pager;
-      return $this;
+        $this->Pager = $Pager;
+        return $this;
     }
 
     /**
@@ -183,7 +183,7 @@ class GetHeaderList_Request
      */
     public function getStoreIds()
     {
-      return $this->StoreIds;
+        return $this->StoreIds;
     }
 
     /**
@@ -192,8 +192,8 @@ class GetHeaderList_Request
      */
     public function setStoreIds($StoreIds)
     {
-      $this->StoreIds = $StoreIds;
-      return $this;
+        $this->StoreIds = $StoreIds;
+        return $this;
     }
 
 }
