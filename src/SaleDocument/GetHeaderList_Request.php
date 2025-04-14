@@ -81,7 +81,7 @@ class GetHeaderList_Request
     }
 
     /**
-     * @param \DateTime $BeginDate
+     * @param \DateTime|null $BeginDate
      * @return GetHeaderList_Request
      */
     public function setBeginDate(\DateTime $BeginDate = null)
@@ -89,7 +89,7 @@ class GetHeaderList_Request
         if ($BeginDate == null) {
             $this->BeginDate = null;
         } else {
-            $this->BeginDate = $BeginDate->format('Y-m-d H:i:s');
+            $this->BeginDate = $BeginDate->format('Y-m-d\TH:i:s');
         }
         return $this;
     }
@@ -147,7 +147,7 @@ class GetHeaderList_Request
     }
 
     /**
-     * @param \DateTime $EndDate
+     * @param \DateTime|null $EndDate
      * @return GetHeaderList_Request
      */
     public function setEndDate(\DateTime $EndDate = null)
@@ -155,7 +155,7 @@ class GetHeaderList_Request
         if ($EndDate == null) {
             $this->EndDate = null;
         } else {
-            $this->EndDate = $EndDate->format('Y-m-d H:i:s');
+            $this->EndDate = $EndDate->format('Y-m-d\TH:i:s');
         }
         return $this;
     }
