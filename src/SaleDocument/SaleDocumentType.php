@@ -15,4 +15,28 @@ class SaleDocumentType
     const DeliveryPreparation = 'DeliveryPreparation';
     const CustomersReservation = 'CustomersReservation';
 
+    /**
+     * @return string[]
+     */
+    public static function getEnumValues(): array
+    {
+        return [
+            self::__default,
+            self::ReturnNotice,
+            self::CustomerDelivery,
+            self::CustomerOrder,
+            self::AvailableOrder,
+            self::CustomerReservationRequest,
+            self::ReceiptOnHold,
+            self::Receipt,
+            self::DeliveryPreparation,
+            self::CustomersReservation,
+        ];
+    }
+
+    public static function valid($str): bool
+    {
+        return in_array($str, self::getEnumValues());
+    }
+
 }
