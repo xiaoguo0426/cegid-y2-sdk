@@ -50,7 +50,7 @@ class CustomerCardsRequest
         $this->CustomerReference = $CustomerReference;
     }
 
-    public function getStoreId(): string
+    public function getStoreId(): string|null
     {
         return $this->StoreId;
     }
