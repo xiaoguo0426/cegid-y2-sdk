@@ -16,6 +16,8 @@ class ProgramCardGet
 
     protected $Type;
 
+    protected $ExpiracyDate;
+
     /**
      * @return mixed
      */
@@ -110,5 +112,21 @@ class ProgramCardGet
     public function setType($Type): void
     {
         $this->Type = $Type;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getExpiracyDate()
+    {
+        return $this->ExpiracyDate;
+    }
+
+    /**
+     * @param mixed $ExpiracyDate
+     */
+    public function setExpiracyDate($ExpiracyDate): void
+    {
+        $this->ExpiracyDate = $ExpiracyDate;
     }
 }
