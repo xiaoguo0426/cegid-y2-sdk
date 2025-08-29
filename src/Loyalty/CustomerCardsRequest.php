@@ -6,9 +6,9 @@ class CustomerCardsRequest
 {
     protected bool|null $ActiveCards;
 
-    protected string $CustomerId;
+    protected string|null $CustomerId;
 
-    protected string $CustomerReference;
+    protected string|null $CustomerReference;
 
     protected string|null $StoreId;
 
@@ -30,17 +30,17 @@ class CustomerCardsRequest
         $this->ActiveCards = $ActiveCards;
     }
 
-    public function getCustomerId(): null
+    public function getCustomerId(): string|null
     {
         return $this->CustomerId;
     }
 
-    public function setCustomerId(null $CustomerId): void
+    public function setCustomerId(string $CustomerId): void
     {
         $this->CustomerId = $CustomerId;
     }
 
-    public function getCustomerReference(): string
+    public function getCustomerReference(): string|null
     {
         return $this->CustomerReference;
     }
